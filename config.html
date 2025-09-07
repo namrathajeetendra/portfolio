@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Personal portfolio of Your Name: projects, experience, and contact." />
+<meta name="color-scheme" content="dark light" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2300d2d3'/%3E%3Ctext x='50' y='58' font-size='54' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EY%3C/text%3E%3C/svg%3E" />
+<style>
+:root {
+--bg: #0b0d10;
+--panel: #12161b;
+--text: #e6e8eb;
+--muted: #9aa5b1;
+--brand: #7c5cff;
+--brand-2: #00d2d3;
+--border: #1f2630;
+--shadow: 0 8px 24px rgba(0,0,0,0.25);
+--radius: 18px;
+--max: 1120px;
+}
+@media (prefers-color-scheme: light) {
+:root {
+--bg: #f7f9fc;
+--panel: #ffffff;
+--text: #0b0d10;
+--muted: #50606f;
+--border: #e7edf3;
+--shadow: 0 8px 30px rgba(44,62,80,.08);
+}
+}
+[data-theme="light"] {
+--bg: #f7f9fc; --panel:#fff; --text:#0b0d10; --muted:#50606f; --border:#e7edf3; --shadow:0 8px 30px rgba(44,62,80,.08);
+}
+[data-theme="dark"] {
+--bg:#0b0d10; --panel:#12161b; --text:#e6e8eb; --muted:#9aa5b1; --border:#1f2630; --shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+margin: 0;
+font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+background: radial-gradient(1200px 800px at 80% -100px, rgba(124,92,255,0.15), transparent 60%),
+radial-gradient(900px 600px at -10% -50px, rgba(0,210,211,0.12), transparent 60%),
+var(--bg);
+color: var(--text);
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 24px; }
+.nav {
+display:flex; align-items:center; justify-content:space-between;
+position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px);
+background: color-mix(in oklab, var(--bg) 75%, transparent);
+border-bottom: 1px solid var(--border);
+}
+.brand { display:flex; align-items:center; gap:12px; font-weight: 700; }
+.brand .dot { width:12px; height:12px; border-radius:50%; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:0 0 0 3px color-mix(in oklab, var(--brand) 30%, transparent); }
